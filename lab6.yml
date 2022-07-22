@@ -1,0 +1,9 @@
+---
+  - name: LAB6
+    hosts: localhost
+    tasks:
+      - name: NFS pkg installation
+        package:
+         name: nfs-utils
+         state: latest
+        when: ansible_facts['distribution'] == "CentOS"
