@@ -1,0 +1,13 @@
+---
+- name: LAB4
+  hosts: localhost
+  tasks:
+    - name: Display free command
+      command: free -h
+      register: free_var
+    - name: Displaying free output
+      debug:
+        msg: "{{ free_var.stdout }}"
+    - name: Display ipV4 address
+      debug:
+        msg: "{{ansible_facts.default_ipv4.address}}"

@@ -1,0 +1,14 @@
+---
+- name: LAB3
+  hosts: localhost
+  remote_user: admin1
+  tasks:
+    - name: Installing nmap package
+      package: 
+        name: nmap
+        state: latest
+    - name: Creating archive
+      archive:
+        path: /home
+        dest: /tmp/home.tar.bz2
+        format: bz2

@@ -1,0 +1,8 @@
+---
+- name: LAB5
+  hosts: localhost
+  tasks:
+   - name: Print Even numbers
+     debug:
+       msg: "{{ item }}....."
+     loop: "{{ range(20,42,2) | list }}"

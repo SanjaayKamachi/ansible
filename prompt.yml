@@ -1,0 +1,12 @@
+---
+- name: prompt
+  hosts: localhost
+  vars_prompt:
+    - name: username
+      prompt: Whats ur name???
+      private: no
+  
+  tasks:
+    - name: print msg
+      debug:
+        msg: Hi, {{username}}
