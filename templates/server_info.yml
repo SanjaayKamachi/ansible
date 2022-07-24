@@ -1,0 +1,8 @@
+---
+- name: Server Details
+  hosts: localhost
+  tasks: 
+    - name: Server info
+      template:
+        src: info.j2
+        dest: /tmp/server-info.yml

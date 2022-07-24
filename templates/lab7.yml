@@ -1,0 +1,8 @@
+---
+  - name: LAB7
+    hosts: localhost
+    tasks:
+      - name: Update MOTD file
+        template:
+          src: motd.j2
+          dest: /etc/motd

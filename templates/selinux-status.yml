@@ -1,0 +1,11 @@
+---
+- name: Check SELinux Status
+  hosts: localhost
+  tasks:
+    - name: Display SELinux Status
+      debug:
+        msg: "{{ ansible_facts['selinux']['status'] }}"
+    - name: Create selinux.out using Jinja2
+      template:
+        src: selinux.j2
+        dest: /tmp/selinux.out
