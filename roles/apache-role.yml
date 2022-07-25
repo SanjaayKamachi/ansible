@@ -1,0 +1,6 @@
+---
+- name: HTTPD-ROLE
+  hosts: localhost
+  roles:
+    - role: httpd-role
+      sysadmin: sanjaay@test

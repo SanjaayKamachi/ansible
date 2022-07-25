@@ -1,0 +1,15 @@
+---
+# tasks file for httpd-role
+- name: Install httpd
+  package:
+    name: apache2 
+    state: latest
+- name: Start and enable httpd
+  service:
+    name: apache2
+    state: started
+    enabled: true
+- name: Creating index file from jinja2
+  template:
+    src: /home/sanjaay/ansible/templates/index.j2
+    dest: /var/www/html/index.html

@@ -1,0 +1,11 @@
+---
+- name: LAB9
+  hosts: localhost 
+  vars:
+    haproxy_backend_servers:
+     - name: webserver1
+       address: localhost:80
+     - name: webserver2
+       address: localhost:81
+  roles:
+     - role: geerlingguy.haproxy
